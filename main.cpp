@@ -12,12 +12,16 @@ private:
     double * prices;
 public:
     // constructors
+    //randomly select 3 legs
+    //randomly select prices from 100.00 to 999.99
     Chair() {
         prices = new double[SIZE];
         legs = 0;
         for (int i = 0; i < SIZE; i++)
             prices[i] = 0;
     }
+    //two parameters: the number of legs, 
+    // and array of 3 doubles (the prices)
     Chair(int l) {
         prices = new double[SIZE];
         legs = l;
@@ -66,6 +70,7 @@ int main() {
     delete livingChair;
     livingChair = nullptr;
 
+    //default constructors used to populate these objects
     //creating dynamic array of chair objects
     Chair *collection = new Chair[SIZE];
     collection[0].setLegs(4);
