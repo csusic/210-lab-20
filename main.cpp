@@ -5,6 +5,8 @@
 
 using namespace std;
 const int SIZE = 3;
+const int MIN = 3, MAX = 4; //chair legs
+const int MIN1 = 10000, MAX1 = 99999; //prices
 
 class Chair {
 private:
@@ -12,13 +14,15 @@ private:
     double * prices;
 public:
     // constructors
-    //randomly select 3 legs
+    //randomly select 3 or 4 legs
     //randomly select prices from 100.00 to 999.99
     Chair() {
         prices = new double[SIZE];
-        legs = 0;
+        legs = 3;
+        legs = (rand() % (MAX-MIN+1) + MIN);
         for (int i = 0; i < SIZE; i++)
             prices[i] = 0;
+            double prices = (rand() % (MAX1-MIN1+1) + MIN1) / (double) 100;
     }
     //two parameters: the number of legs, 
     // and array of 3 doubles (the prices)
