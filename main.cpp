@@ -75,9 +75,6 @@ int main() {
     //default constructors used to populate these objects
     //creating dynamic array of chair objects
     Chair *collection = new Chair[SIZE];
-    //collection[i]
-    //collection[1].setPrices();
-    //collection[2].setPrices();
     for (int i = 0; i < SIZE; i++)
         collection[i].print();
     
